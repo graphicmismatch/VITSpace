@@ -1,46 +1,100 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="mr">
 <head>
     <meta charset="UTF-8">
-    <title>VITSpace</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VITSpace साधने</title>
     <link rel="stylesheet" href="styles/style.css" />
 </head>
+<body data-page="tools" data-title-key="page.tools.title">
+    <nav class="navbar">
+        <ul>
+            <li class="navlogo">
+                <a href="index.html">> VITSPACE</a>
+            </li>
+            <li class="navcontent">
+                <a href="toolsDirectory.html" data-i18n="nav.toolsPortal">साधन_पोर्टल</a>
+            </li>
+            <li class="navcontent">
+                <a href="dataDirectory.html" data-i18n="nav.dataPortal">डेटा_पोर्टल</a>
+            </li>
+            <li class="navcontent">
+                <a href="links.html" data-i18n="nav.sources">स्रोत</a>
+            </li>
+            <li class="navcontent lang-switch">
+                <button type="button" class="lang-toggle" data-lang-switch="mr" data-i18n="nav.langMarathi">मराठी</button>
+                <button type="button" class="lang-toggle" data-lang-switch="en" data-i18n="nav.langEnglish">EN</button>
+            </li>
+            <li class="navcontent"><span id="clock">00:00:00</span></li>
+        </ul>
+    </nav>
 
-<nav class="navbar">
-    <ul>
-        <li class="navlogo">
-            <a href="index.html">> VITSPACE</a>
-        </li>
-        <li class="navcontent">
-            <a href="toolsDirectory.html">TOOLS_PORTAL</a>
-        </li>
-        <li class="navcontent">
-            <a href="index.html">DATA_PORTAL</a>
-        </li>
-        <li class="navcontent">
-            <a href="links.html">SOURCES</a>
-        </li>
-        <li class="navcontent"><span id="clock">00:00:00</span></li>
-    </ul>
-</nav>
+    <main>
+        <div class="grid">
+            <div class="box full-span">
+                <span class="label" data-i18n="tools.heading">साधन_निर्देशिका</span>
+                <p class="hero-copy" data-i18n="tools.hero">कक्षीय गती, प्रणोदन नियोजन, संप्रेषण वेळ, तारकीय भौतिकी आणि सापेक्षता यांसाठी कार्यरत गणक.</p>
+            </div>
 
+            <div class="box">
+                <span class="label" data-i18n="tools.orbital.label">कक्षीय_यांत्रिकी</span>
+                <ul class="page-list">
+                    <li>> <a href="orbitalCalculationTools.html" data-i18n="home.orbitalLink">कक्षीय गणना साधने</a></li>
+                </ul>
+                <p class="muted" data-i18n="tools.orbital.desc">वर्तुळाकार कक्षेतील वेग आणि कक्षीय कालावधी मोजणी.</p>
+            </div>
 
-<body>
-    <div class="box">
-        <p>> <a href="./orbitalCalculationTools.html">Orbit Calculator</a></p>
-        <p>> Signal Decoder </p>
-    </div>
+            <div class="box">
+                <span class="label" data-i18n="tools.gravity.label">गुरुत्व_साधने</span>
+                <ul class="page-list">
+                    <li>> <a href="escapeVelocityTools.html" data-i18n="home.escapeLink">मुक्ती वेग साधने</a></li>
+                </ul>
+                <p class="muted" data-i18n="tools.gravity.desc">मुक्ती वेग आणि पृष्ठीय गुरुत्व गणक.</p>
+            </div>
 
+            <div class="box">
+                <span class="label" data-i18n="tools.communication.label">संप्रेषण_साधने</span>
+                <ul class="page-list">
+                    <li>> <a href="signalDelayTools.html" data-i18n="home.signalLink">सिग्नल विलंब साधने</a></li>
+                </ul>
+                <p class="muted" data-i18n="tools.communication.desc">एकमार्गी आणि दुतर्फा गहन-अंतराळ विलंब अंदाज.</p>
+            </div>
 
-    <br>
-    <br>
+            <div class="box">
+                <span class="label" data-i18n="tools.propulsion.label">प्रणोदन_साधने</span>
+                <ul class="page-list">
+                    <li>> <a href="rocketEquationTools.html" data-i18n="home.rocketLink">रॉकेट समीकरण साधने</a></li>
+                </ul>
+                <p class="muted" data-i18n="tools.propulsion.desc">डेल्टा-v आणि इंधन अंश गणक.</p>
+            </div>
+
+            <div class="box">
+                <span class="label" data-i18n="tools.stellar.label">तारकीय_भौतिकी</span>
+                <ul class="page-list">
+                    <li>> <a href="stellarPhysicsTools.html" data-i18n="home.stellarLink">तारकीय भौतिकी साधने</a></li>
+                </ul>
+                <p class="muted" data-i18n="tools.stellar.desc">ब्लॅकबॉडी शिखर तरंगलांबी, तारकीय प्रकाशमानता आणि प्राप्त फ्लक्स मोजणी.</p>
+            </div>
+
+            <div class="box">
+                <span class="label" data-i18n="tools.relativity.label">सापेक्षता_साधने</span>
+                <ul class="page-list">
+                    <li>> <a href="relativityTools.html" data-i18n="home.relativityLink">सापेक्षता साधने</a></li>
+                </ul>
+                <p class="muted" data-i18n="tools.relativity.desc">श्वार्झशिल्ड त्रिज्या आणि सापेक्षतावादी काल-विस्तार गणक.</p>
+            </div>
+        </div>
+    </main>
+
     <footer>
         <div class="box">
-            <span class="label">FOOTER</span>
-            <p>> Copyright 2026 - Rayan Madan</p>
+            <span class="label" data-i18n="footer.label">तळटीप</span>
+            <p data-i18n="footer.copyright">> कॉपीराइट 2026 - Rayan Madan</p>
         </div>
     </footer>
 
+    <script src="scripts/translations.js"></script>
+    <script src="scripts/numberInputs.js"></script>
     <script src="scripts/clock.js"></script>
-
 </body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VITSpace तारकीय भौतिकी साधने</title>
+    <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body data-page="stellar" data-title-key="page.stellar.title">
+    <nav class="navbar">
+        <ul>
+            <li class="navlogo">
+                <a href="index.html">> VITSPACE</a>
+            </li>
+            <li class="navcontent">
+                <a href="toolsDirectory.html" data-i18n="nav.toolsPortal">साधन_पोर्टल</a>
+            </li>
+            <li class="navcontent">
+                <a href="dataDirectory.html" data-i18n="nav.dataPortal">डेटा_पोर्टल</a>
+            </li>
+            <li class="navcontent">
+                <a href="links.html" data-i18n="nav.sources">स्रोत</a>
+            </li>
+            <li class="navcontent lang-switch">
+                <button type="button" class="lang-toggle" data-lang-switch="mr" data-i18n="nav.langMarathi">मराठी</button>
+                <button type="button" class="lang-toggle" data-lang-switch="en" data-i18n="nav.langEnglish">EN</button>
+            </li>
+            <li class="navcontent"><span id="clock">00:00:00</span></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="grid">
+            <div class="box full-span">
+                <span class="label" data-i18n="stellar.heading">तारकीय_भौतिकी</span>
+                <p class="hero-copy" data-i18n="stellar.hero">ब्लॅकबॉडी उत्सर्जन, तारकीय प्रकाशमानता आणि अंतरावरील प्राप्त फ्लक्स यांसाठी जलद खगोलभौतिकीय तपास.</p>
+            </div>
+
+            <div class="box">
+                <span class="label" data-i18n="stellar.wienLabel">वीन_शिखर_तरंगलांबी</span>
+                <form id="WienPeakCalc">
+                    <div>
+                        <label for="wpT" data-i18n="stellar.temperature">तापमान:</label>
+                        <input type="number" id="wpT" step="any" value="5778" required>
+                        <label>K</label>
+                    </div>
+                    <button type="submit" data-i18n="common.calculate">गणना करा</button>
+                </form>
+                <p class="result" id="wienPeakRes" data-i18n="stellar.peakResult">शिखर तरंगलांबी:</p>
+            </div>
+
+            <div class="box">
+                <span class="label" data-i18n="stellar.luminosityLabel">तारकीय_प्रकाशमानता</span>
+                <form id="StellarLuminosityCalc">
+                    <div>
+                        <label for="slR" data-i18n="stellar.stellarRadius">तारकीय त्रिज्या:</label>
+                        <input type="number" id="slR" step="any" value="6.957" required>
+                        <label>x 10^</label>
+                        <input type="number" id="slRe" class="exponent-input" value="8" required>
+                        <label>m</label>
+                    </div>
+                    <div>
+                        <label for="slT" data-i18n="stellar.effectiveTemperature">प्रभावी तापमान:</label>
+                        <input type="number" id="slT" step="any" value="5778" required>
+                        <label>K</label>
+                    </div>
+                    <button type="submit" data-i18n="common.calculate">गणना करा</button>
+                </form>
+                <p class="result" id="stellarLuminosityRes" data-i18n="stellar.luminosityResult">प्रकाशमानता:</p>
+            </div>
+
+            <div class="box full-span">
+                <span class="label" data-i18n="stellar.fluxLabel">अंतरावरील_प्रसारी_फ्लक्स</span>
+                <form id="RadiativeFluxCalc">
+                    <div>
+                        <label for="rfL" data-i18n="stellar.sourceLuminosity">स्रोत प्रकाशमानता:</label>
+                        <input type="number" id="rfL" step="any" value="3.828" required>
+                        <label>x 10^</label>
+                        <input type="number" id="rfLe" class="exponent-input" value="26" required>
+                        <label>W</label>
+                    </div>
+                    <div>
+                        <label for="rfD" data-i18n="signal.distance">अंतर:</label>
+                        <input type="number" id="rfD" step="any" value="1.496" required>
+                        <label>x 10^</label>
+                        <input type="number" id="rfDe" class="exponent-input" value="11" required>
+                        <label>m</label>
+                    </div>
+                    <button type="submit" data-i18n="common.calculate">गणना करा</button>
+                </form>
+                <p class="result" id="radiativeFluxRes" data-i18n="stellar.fluxResult">फ्लक्स:</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="box">
+            <span class="label" data-i18n="footer.label">तळटीप</span>
+            <p data-i18n="footer.copyright">> कॉपीराइट 2026 - Rayan Madan</p>
+        </div>
+    </footer>
+
+    <script src="scripts/translations.js"></script>
+    <script src="scripts/numberInputs.js"></script>
+    <script src="scripts/clock.js"></script>
+    <script src="scripts/stellarPhysicsTools.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VITSpace डेटा</title>
+    <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body data-page="data" data-title-key="page.data.title">
+    <nav class="navbar">
+        <ul>
+            <li class="navlogo">
+                <a href="index.html">> VITSPACE</a>
+            </li>
+            <li class="navcontent">
+                <a href="toolsDirectory.html" data-i18n="nav.toolsPortal">साधन_पोर्टल</a>
+            </li>
+            <li class="navcontent">
+                <a href="dataDirectory.html" data-i18n="nav.dataPortal">डेटा_पोर्टल</a>
+            </li>
+            <li class="navcontent">
+                <a href="links.html" data-i18n="nav.sources">स्रोत</a>
+            </li>
+            <li class="navcontent lang-switch">
+                <button type="button" class="lang-toggle" data-lang-switch="mr" data-i18n="nav.langMarathi">मराठी</button>
+                <button type="button" class="lang-toggle" data-lang-switch="en" data-i18n="nav.langEnglish">EN</button>
+            </li>
+            <li class="navcontent"><span id="clock">00:00:00</span></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="grid">
+            <div class="box full-span">
+                <span class="label" data-i18n="data.heading">डेटा_निर्देशिका</span>
+                <p class="hero-copy" data-i18n="data.hero">मुक्त अवकाशीय डेटा आणून तो थेट पोर्टलमध्ये दाखवणारी थेट पृष्ठे.</p>
+            </div>
+
+            <div class="box">
+                <span class="label" data-i18n="data.imageFeed">प्रतिमा_फीड</span>
+                <ul class="page-list">
+                    <li>> <a href="apodData.html" data-i18n="home.apodLink">खगोलचित्र फीड</a></li>
+                </ul>
+                <p class="muted" data-i18n="data.imageFeedDesc">NASA चे दिवसाचे खगोलचित्र शीर्षक, माध्यम आणि स्पष्टीकरणासह लोड करते.</p>
+            </div>
+
+            <div class="box">
+                <span class="label" data-i18n="data.objectFeed">वस्तू_फीड</span>
+                <ul class="page-list">
+                    <li>> <a href="neoData.html" data-i18n="home.neoLink">पृथ्वीजवळील वस्तू फीड</a></li>
+                </ul>
+                <p class="muted" data-i18n="data.objectFeedDesc">जवळून जाणाऱ्या वस्तू आणते आणि धोका स्थिती, वेग आणि चुकलेले अंतर संक्षेपित करते.</p>
+            </div>
+
+            <div class="box">
+                <span class="label" data-i18n="data.earthImagery">पृथ्वी_प्रतिमा</span>
+                <ul class="page-list">
+                    <li>> <a href="gibsEarthData.html" data-i18n="home.gibsLink">GIBS पृथ्वी फीड</a></li>
+                </ul>
+                <p class="muted" data-i18n="data.earthImageryDesc">समर्थित GIBS सेवेतून दररोजची जागतिक खरी-रंग पृथ्वी प्रतिमा लोड करते.</p>
+            </div>
+
+            <div class="box">
+                <span class="label" data-i18n="data.earthObservation">पृथ्वी_निरीक्षण</span>
+                <ul class="page-list">
+                    <li>> <a href="epicData.html" data-i18n="home.epicLink">EPIC पृथ्वी फीड</a></li>
+                </ul>
+                <p class="muted" data-i18n="data.earthObservationDesc">नवीनतम EPIC पूर्ण-डिस्क पृथ्वी फ्रेम्स आणि केंद्र निर्देशांक दाखवते.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="box">
+            <span class="label" data-i18n="footer.label">तळटीप</span>
+            <p data-i18n="footer.copyright">> कॉपीराइट 2026 - Rayan Madan</p>
+        </div>
+    </footer>
+
+    <script src="scripts/translations.js"></script>
+    <script src="scripts/numberInputs.js"></script>
+    <script src="scripts/clock.js"></script>
+</body>
+</html>

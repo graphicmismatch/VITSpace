@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VITSpace रॉकेट समीकरण साधने</title>
+    <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body data-page="rocket" data-title-key="page.rocket.title">
+    <nav class="navbar">
+        <ul>
+            <li class="navlogo">
+                <a href="index.html">> VITSPACE</a>
+            </li>
+            <li class="navcontent">
+                <a href="toolsDirectory.html" data-i18n="nav.toolsPortal">साधन_पोर्टल</a>
+            </li>
+            <li class="navcontent">
+                <a href="dataDirectory.html" data-i18n="nav.dataPortal">डेटा_पोर्टल</a>
+            </li>
+            <li class="navcontent">
+                <a href="links.html" data-i18n="nav.sources">स्रोत</a>
+            </li>
+            <li class="navcontent lang-switch">
+                <button type="button" class="lang-toggle" data-lang-switch="mr" data-i18n="nav.langMarathi">मराठी</button>
+                <button type="button" class="lang-toggle" data-lang-switch="en" data-i18n="nav.langEnglish">EN</button>
+            </li>
+            <li class="navcontent"><span id="clock">00:00:00</span></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="grid">
+            <div class="box full-span">
+                <span class="label" data-i18n="rocket.heading">प्रणोदन_विश्लेषण</span>
+                <p class="hero-copy" data-i18n="rocket.hero">जलद मोहीम नियोजन तपासांसाठी मूलभूत रॉकेट-समीकरण संबंध वापरा.</p>
+            </div>
+
+            <div class="box">
+                <span class="label" data-i18n="rocket.deltaVLabel">डेल्टा_V_गणक</span>
+                <form id="DeltaVCalc">
+                    <div>
+                        <label for="dvIsp" data-i18n="rocket.specificImpulse">विशिष्ट इम्पल्स:</label>
+                        <input type="number" id="dvIsp" step="any" value="320" required>
+                        <label>s</label>
+                    </div>
+                    <div>
+                        <label for="dvG" data-i18n="rocket.standardGravity">प्रमाणित गुरुत्व:</label>
+                        <input type="number" id="dvG" step="any" value="9.80665" required>
+                        <label>m s<sup>-2</sup></label>
+                    </div>
+                    <div>
+                        <label for="dvM0" data-i18n="rocket.initialMass">प्रारंभिक मान:</label>
+                        <input type="number" id="dvM0" step="any" value="500000" required>
+                        <label>kg</label>
+                    </div>
+                    <div>
+                        <label for="dvMf" data-i18n="rocket.finalMass">अंतिम मान:</label>
+                        <input type="number" id="dvMf" step="any" value="120000" required>
+                        <label>kg</label>
+                    </div>
+                    <button type="submit" data-i18n="common.calculate">गणना करा</button>
+                </form>
+                <p class="result" id="deltaVRes" data-i18n="rocket.deltaVResult">डेल्टा-v:</p>
+            </div>
+
+            <div class="box">
+                <span class="label" data-i18n="rocket.propellantFractionLabel">इंधन_अंश_गणक</span>
+                <form id="PropellantFractionCalc">
+                    <div>
+                        <label for="pfWet" data-i18n="rocket.wetMass">एकूण मान:</label>
+                        <input type="number" id="pfWet" step="any" value="500000" required>
+                        <label>kg</label>
+                    </div>
+                    <div>
+                        <label for="pfDry" data-i18n="rocket.dryMass">शुष्क मान:</label>
+                        <input type="number" id="pfDry" step="any" value="120000" required>
+                        <label>kg</label>
+                    </div>
+                    <button type="submit" data-i18n="common.calculate">गणना करा</button>
+                </form>
+                <p class="result" id="propellantFractionRes" data-i18n="rocket.propellantFractionResult">इंधन अंश:</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="box">
+            <span class="label" data-i18n="footer.label">तळटीप</span>
+            <p data-i18n="footer.copyright">> कॉपीराइट 2026 - Rayan Madan</p>
+        </div>
+    </footer>
+
+    <script src="scripts/translations.js"></script>
+    <script src="scripts/numberInputs.js"></script>
+    <script src="scripts/clock.js"></script>
+    <script src="scripts/rocketEquationTools.js"></script>
+</body>
+</html>

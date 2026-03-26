@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VITSpace खगोलचित्र फीड</title>
+    <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body data-page="apod" data-title-key="page.apod.title">
+    <nav class="navbar">
+        <ul>
+            <li class="navlogo">
+                <a href="index.html">> VITSPACE</a>
+            </li>
+            <li class="navcontent">
+                <a href="toolsDirectory.html" data-i18n="nav.toolsPortal">साधन_पोर्टल</a>
+            </li>
+            <li class="navcontent">
+                <a href="dataDirectory.html" data-i18n="nav.dataPortal">डेटा_पोर्टल</a>
+            </li>
+            <li class="navcontent">
+                <a href="links.html" data-i18n="nav.sources">स्रोत</a>
+            </li>
+            <li class="navcontent lang-switch">
+                <button type="button" class="lang-toggle" data-lang-switch="mr" data-i18n="nav.langMarathi">मराठी</button>
+                <button type="button" class="lang-toggle" data-lang-switch="en" data-i18n="nav.langEnglish">EN</button>
+            </li>
+            <li class="navcontent"><span id="clock">00:00:00</span></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="grid">
+            <div class="box full-span">
+                <span class="label" data-i18n="apod.heading">दिवसाचे_खगोलचित्र</span>
+                <p class="hero-copy" data-i18n="apod.hero">NASA कडून थेट आणलेले प्रतिमा आणि वर्णन फीड.</p>
+                <button type="button" id="refreshApod" data-i18n="common.refreshFeed">फीड रीफ्रेश करा</button>
+            </div>
+
+            <div class="box">
+                <span class="label" data-i18n="apod.metadata">फीड_माहिती</span>
+                <ul class="status-list">
+                    <li class="status-line"><span data-i18n="apod.title">शीर्षक</span><span id="apodTitle">लोड होत आहे...</span></li>
+                    <li class="status-line"><span data-i18n="apod.date">दिनांक</span><span id="apodDate">-</span></li>
+                    <li class="status-line"><span data-i18n="apod.credit">श्रेय</span><span id="apodCopyright">-</span></li>
+                </ul>
+                <div class="result"><span data-i18n="common.statusPrefix">स्थिती:</span> <span id="apodStatus" data-i18n="apod.statusLoading">API शी संपर्क साधत आहे...</span></div>
+            </div>
+
+            <div class="box">
+                <span class="label" data-i18n="apod.media">माध्यम_प्रवाह</span>
+                <div class="media-frame" id="apodMedia">
+                    <p data-i18n="apod.awaitingMedia">माध्यम प्रवाहाची प्रतीक्षा...</p>
+                </div>
+            </div>
+
+            <div class="box full-span">
+                <span class="label" data-i18n="apod.explanationLabel">मोहिम_स्पष्टीकरण</span>
+                <p id="apodExplanation" data-i18n="apod.loadingDescription">वर्णन लोड होत आहे...</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="box">
+            <span class="label" data-i18n="footer.label">तळटीप</span>
+            <p data-i18n="footer.copyright">> कॉपीराइट 2026 - Rayan Madan</p>
+        </div>
+    </footer>
+
+    <script src="scripts/translations.js"></script>
+    <script src="scripts/numberInputs.js"></script>
+    <script src="scripts/clock.js"></script>
+    <script src="scripts/apodData.js"></script>
+</body>
+</html>

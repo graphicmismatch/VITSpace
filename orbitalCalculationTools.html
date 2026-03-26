@@ -1,129 +1,124 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="mr">
 <head>
     <meta charset="UTF-8">
-    <title>VITSpace</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VITSpace कक्षीय साधने</title>
     <link rel="stylesheet" href="styles/style.css" />
 </head>
+<body data-page="orbital" data-title-key="page.orbital.title">
+    <nav class="navbar">
+        <ul>
+            <li class="navlogo">
+                <a href="index.html">> VITSPACE</a>
+            </li>
+            <li class="navcontent">
+                <a href="toolsDirectory.html" data-i18n="nav.toolsPortal">साधन_पोर्टल</a>
+            </li>
+            <li class="navcontent">
+                <a href="dataDirectory.html" data-i18n="nav.dataPortal">डेटा_पोर्टल</a>
+            </li>
+            <li class="navcontent">
+                <a href="links.html" data-i18n="nav.sources">स्रोत</a>
+            </li>
+            <li class="navcontent lang-switch">
+                <button type="button" class="lang-toggle" data-lang-switch="mr" data-i18n="nav.langMarathi">मराठी</button>
+                <button type="button" class="lang-toggle" data-lang-switch="en" data-i18n="nav.langEnglish">EN</button>
+            </li>
+            <li class="navcontent"><span id="clock">00:00:00</span></li>
+        </ul>
+    </nav>
 
-<nav class="navbar">
-    <ul>
-        <li class="navlogo">
-            <a href="index.html">> VITSPACE</a>
-        </li>
-        <li class="navcontent">
-            <a href="toolsDirectory.html">TOOLS_PORTAL</a>
-        </li>
-        <li class="navcontent">
-            <a href="index.html">DATA_PORTAL</a>
-        </li>
-        <li class="navcontent">
-            <a href="links.html">SOURCES</a>
-        </li>
-        <li class="navcontent"><span id="clock">00:00:00</span></li>
-    </ul>
-</nav>
+    <main>
+        <div class="box full-span">
+            <span class="label" data-i18n="orbital.heading">वर्तुळाकार_कक्षा</span>
+            <p class="hero-copy" data-i18n="orbital.hero">ग्रहीय वस्तूभोवतीच्या वर्तुळाकार मार्गांसाठी मूलभूत कक्षीय यांत्रिकी साधने.</p>
+            <div class="grid">
+                <div class="box">
+                    <span class="label" data-i18n="orbital.speed.label">उपग्रह_कक्षीय_वेग_गणक</span>
+                    <form id="OrbitalSpeedCalc">
+                        <div>
+                            <label for="scH" data-i18n="orbital.orbitHeight">कक्षा उंची:</label>
+                            <input type="number" id="scH" name="scH" step="any" required>
+                            <label>x 10^</label>
+                            <input type="number" id="scHe" name="scHe" class="exponent-input" value="0" required>
+                            <label>m</label>
+                        </div>
+                        <div>
+                            <label for="scG" data-i18n="orbital.gravitationalConstant">गुरुत्व स्थिरांक:</label>
+                            <input type="number" id="scG" name="scG" step="any" value="6.6743" required>
+                            <label>x 10^</label>
+                            <input type="number" id="scGe" name="scGe" class="exponent-input" value="-11" required>
+                            <label>m<sup>3</sup> kg<sup>-1</sup> s<sup>-2</sup></label>
+                        </div>
+                        <div>
+                            <label for="scM" data-i18n="orbital.planetaryMass">ग्रहमान:</label>
+                            <input type="number" id="scM" name="scM" step="any" value="5.9722" required>
+                            <label>x 10^</label>
+                            <input type="number" id="scMe" name="scMe" class="exponent-input" value="24" required>
+                            <label>kg</label>
+                        </div>
+                        <div>
+                            <label for="scR" data-i18n="orbital.planetaryRadius">ग्रह त्रिज्या:</label>
+                            <input type="number" id="scR" name="scR" step="any" value="6.371" required>
+                            <label>x 10^</label>
+                            <input type="number" id="scRe" name="scRe" class="exponent-input" value="6" required>
+                            <label>m</label>
+                        </div>
+                        <button type="submit" data-i18n="common.calculate">गणना करा</button>
+                    </form>
+                    <p class="result" id="speedCalcRes" data-i18n="orbital.speedResult">कक्षीय वेग:</p>
+                </div>
 
-
-<body>
-
-    <br>
-    <br>
-    <div class="box">
-        <span class="label"> CIRCULAR_ORBITS</span>
-        <div class="grid">
-
-            <div class="box">
-                <span class="label">SATELLITE_ORBIT_SPEED_CALCULATOR</span>
-                <form id="OrbitalSpeedCalc">
-                    <div>
-                        <label for="height">Orbit Height:</label>
-                        <input type="number" id="scH" name="scH" step="any" required>
-                        <label>x 10^</label>
-                        <input type="number" id="scHe" name="scHe" value="0" required>
-                        <label>m</label>
-                    </div>
-                    <div>
-                        <label for="G">Gravitational Constant:</label>
-                        <input type="number" id="scG" name="scG" step="any" value="6.6743" required>
-                        <label>x 10^</label>
-                        <input type="number" id="scGe" name="scGe" value="-11" required>
-                        <label>m<sup>3</sup> kg<sup>-1</sup> s<sup>-2</sup></label>
-                    </div>
-                    <div>
-                        <label for="mass">Planetary Mass:</label>
-                        <input type="number" id="scM" name="scM" step="any" value="5.9722" required>
-                        <label>x 10^</label>
-                        <input type="number" id="scMe" name="scMe" value="24" required>
-                        <label>kg</label>
-                    </div>
-                    <div>
-                        <label for="radius">Planetary Radius:</label>
-                        <input type="number" id="scR" name="scR" step="any" value="6.371" required>
-                        <label>x 10^</label>
-                        <input type="number" id="scRe" name="scRe" value="6" required>
-                        <label>m</label>
-                    </div>
-                    <button type="submit">Calculate</button>
-                </form>
-                <p id="speedCalcRes">Orbital Speed: -</p>
-            </div>
-
-            <div class="box">
-                <span class="label">SATELLITE_ORBITAL_PERIOD_CALCULATOR</span>
-                <form id="OrbitalPeriodCalc">
-                    <div>
-                        <label for="height">Orbit Height:</label>
-                        <input type="number" id="pcH" name="pcH" step="any" required>
-                        <label>x 10^</label>
-                        <input type="number" id="pcHe" name="pcHe" value="0" required>
-                        <label>m</label>
-                    </div>
-                    <div>
-                        <label for="G">Gravitational Constant:</label>
-                        <input type="number" id="pcG" name="pcG" step="any" value="6.6743" required>
-                        <label>x 10^</label>
-                        <input type="number" id="pcGe" name="pcGe" value="-11" required>
-                        <label>m<sup>3</sup> kg<sup>-1</sup> s<sup>-2</sup></label>
-                    </div>
-                    <div>
-                        <label for="mass">Planetary Mass:</label>
-                        <input type="number" id="pcM" name="pcM" step="any" value="5.9722" required>
-                        <label>x 10^</label>
-                        <input type="number" id="pcMe" name="pcMe" value="24" required>
-                        <label>kg</label>
-                    </div>
-                    <div>
-                        <label for="radius">Planetary Radius:</label>
-                        <input type="number" id="pcR" name="pcR" step="any" value="6.371" required>
-                        <label>x 10^</label>
-                        <input type="number" id="pcRe" name="pcRe" value="6" required>
-                        <label>m</label>
-                    </div>
-                    <button type="submit">Calculate</button>
-                </form>
-                <p id="periodCalcRes">Orbital Period: -</p>
+                <div class="box">
+                    <span class="label" data-i18n="orbital.period.label">उपग्रह_कक्षीय_कालावधी_गणक</span>
+                    <form id="OrbitalPeriodCalc">
+                        <div>
+                            <label for="pcH" data-i18n="orbital.orbitHeight">कक्षा उंची:</label>
+                            <input type="number" id="pcH" name="pcH" step="any" required>
+                            <label>x 10^</label>
+                            <input type="number" id="pcHe" name="pcHe" class="exponent-input" value="0" required>
+                            <label>m</label>
+                        </div>
+                        <div>
+                            <label for="pcG" data-i18n="orbital.gravitationalConstant">गुरुत्व स्थिरांक:</label>
+                            <input type="number" id="pcG" name="pcG" step="any" value="6.6743" required>
+                            <label>x 10^</label>
+                            <input type="number" id="pcGe" name="pcGe" class="exponent-input" value="-11" required>
+                            <label>m<sup>3</sup> kg<sup>-1</sup> s<sup>-2</sup></label>
+                        </div>
+                        <div>
+                            <label for="pcM" data-i18n="orbital.planetaryMass">ग्रहमान:</label>
+                            <input type="number" id="pcM" name="pcM" step="any" value="5.9722" required>
+                            <label>x 10^</label>
+                            <input type="number" id="pcMe" name="pcMe" class="exponent-input" value="24" required>
+                            <label>kg</label>
+                        </div>
+                        <div>
+                            <label for="pcR" data-i18n="orbital.planetaryRadius">ग्रह त्रिज्या:</label>
+                            <input type="number" id="pcR" name="pcR" step="any" value="6.371" required>
+                            <label>x 10^</label>
+                            <input type="number" id="pcRe" name="pcRe" class="exponent-input" value="6" required>
+                            <label>m</label>
+                        </div>
+                        <button type="submit" data-i18n="common.calculate">गणना करा</button>
+                    </form>
+                    <p class="result" id="periodCalcRes" data-i18n="orbital.periodResult">कक्षीय कालावधी:</p>
+                </div>
             </div>
         </div>
-    </div>
-    
-    <br>
-    <div class="box">
-        <span class="label">ELLIPTICAL_ORBITS</span>
-        <div class="grid">
-        </div>
-    </div>
-    <br>
-    <br>
+    </main>
 
     <footer>
         <div class="box">
-            <span class="label">FOOTER</span>
-            <p>> Copyright 2026 - Rayan Madan</p>
+            <span class="label" data-i18n="footer.label">तळटीप</span>
+            <p data-i18n="footer.copyright">> कॉपीराइट 2026 - Rayan Madan</p>
         </div>
     </footer>
 
+    <script src="scripts/translations.js"></script>
+    <script src="scripts/numberInputs.js"></script>
     <script src="scripts/clock.js"></script>
     <script src="scripts/orbitalCalcTools.js"></script>
 </body>
-
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VITSpace पृथ्वीजवळील वस्तू फीड</title>
+    <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body data-page="neo" data-title-key="page.neo.title">
+    <nav class="navbar">
+        <ul>
+            <li class="navlogo">
+                <a href="index.html">> VITSPACE</a>
+            </li>
+            <li class="navcontent">
+                <a href="toolsDirectory.html" data-i18n="nav.toolsPortal">साधन_पोर्टल</a>
+            </li>
+            <li class="navcontent">
+                <a href="dataDirectory.html" data-i18n="nav.dataPortal">डेटा_पोर्टल</a>
+            </li>
+            <li class="navcontent">
+                <a href="links.html" data-i18n="nav.sources">स्रोत</a>
+            </li>
+            <li class="navcontent lang-switch">
+                <button type="button" class="lang-toggle" data-lang-switch="mr" data-i18n="nav.langMarathi">मराठी</button>
+                <button type="button" class="lang-toggle" data-lang-switch="en" data-i18n="nav.langEnglish">EN</button>
+            </li>
+            <li class="navcontent"><span id="clock">00:00:00</span></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="grid">
+            <div class="box full-span">
+                <span class="label" data-i18n="neo.heading">पृथ्वीजवळील_वस्तू</span>
+                <p class="hero-copy" data-i18n="neo.hero">सध्याच्या तीन दिवसांच्या कालमर्यादेतील थेट जवळून जाणाऱ्या वस्तू.</p>
+                <button type="button" id="refreshNeo" data-i18n="common.refreshFeed">फीड रीफ्रेश करा</button>
+            </div>
+
+            <div class="box">
+                <span class="label" data-i18n="neo.summary">फीड_सारांश</span>
+                <ul class="status-list">
+                    <li class="status-line"><span data-i18n="neo.window">कालमर्यादा</span><span id="neoWindow">-</span></li>
+                    <li class="status-line"><span data-i18n="neo.objectsLoaded">लोड झालेल्या वस्तू</span><span id="neoCount">-</span></li>
+                    <li class="status-line"><span data-i18n="neo.potentialHazards">संभाव्य धोके</span><span id="neoHazards">-</span></li>
+                </ul>
+                <div class="result"><span data-i18n="common.statusPrefix">स्थिती:</span> <span id="neoStatus" data-i18n="neo.statusLoading">API शी संपर्क साधत आहे...</span></div>
+            </div>
+
+            <div class="box full-span">
+                <span class="label" data-i18n="neo.approachLog">जवळीक_नोंद</span>
+                <div id="neoPagination" class="result" hidden>
+                    <button type="button" id="neoPrevPage" data-i18n="neo.previous">मागील</button>
+                    <span id="neoPageInfo" data-i18n="neo.pageInfo">पृष्ठ 1 / 1</span>
+                    <button type="button" id="neoNextPage" data-i18n="neo.next">पुढील</button>
+                </div>
+                <ul id="neoList" class="data-list">
+                    <li data-i18n="neo.loadingFeed">जवळून जाणाऱ्या वस्तू लोड होत आहेत...</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="box">
+            <span class="label" data-i18n="footer.label">तळटीप</span>
+            <p data-i18n="footer.copyright">> कॉपीराइट 2026 - Rayan Madan</p>
+        </div>
+    </footer>
+
+    <script src="scripts/translations.js"></script>
+    <script src="scripts/numberInputs.js"></script>
+    <script src="scripts/clock.js"></script>
+    <script src="scripts/neoData.js"></script>
+</body>
+</html>

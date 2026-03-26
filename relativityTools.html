@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VITSpace सापेक्षता साधने</title>
+    <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body data-page="relativity" data-title-key="page.relativity.title">
+    <nav class="navbar">
+        <ul>
+            <li class="navlogo">
+                <a href="index.html">> VITSPACE</a>
+            </li>
+            <li class="navcontent">
+                <a href="toolsDirectory.html" data-i18n="nav.toolsPortal">साधन_पोर्टल</a>
+            </li>
+            <li class="navcontent">
+                <a href="dataDirectory.html" data-i18n="nav.dataPortal">डेटा_पोर्टल</a>
+            </li>
+            <li class="navcontent">
+                <a href="links.html" data-i18n="nav.sources">स्रोत</a>
+            </li>
+            <li class="navcontent lang-switch">
+                <button type="button" class="lang-toggle" data-lang-switch="mr" data-i18n="nav.langMarathi">मराठी</button>
+                <button type="button" class="lang-toggle" data-lang-switch="en" data-i18n="nav.langEnglish">EN</button>
+            </li>
+            <li class="navcontent"><span id="clock">00:00:00</span></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="grid">
+            <div class="box full-span">
+                <span class="label" data-i18n="relativity.heading">सापेक्षता_विश्लेषण</span>
+                <p class="hero-copy" data-i18n="relativity.hero">सापेक्ष गती आणि प्रबळ गुरुत्वातील लांबी व वेळ मोजण्यासाठी संक्षिप्त गणक.</p>
+            </div>
+
+            <div class="box">
+                <span class="label" data-i18n="relativity.schwarzschildLabel">श्वार्झशिल्ड_त्रिज्या</span>
+                <form id="SchwarzschildRadiusCalc">
+                    <div>
+                        <label for="srG" data-i18n="orbital.gravitationalConstant">गुरुत्व स्थिरांक:</label>
+                        <input type="number" id="srG" step="any" value="6.6743" required>
+                        <label>x 10^</label>
+                        <input type="number" id="srGe" class="exponent-input" value="-11" required>
+                        <label>m<sup>3</sup> kg<sup>-1</sup> s<sup>-2</sup></label>
+                    </div>
+                    <div>
+                        <label for="srM" data-i18n="relativity.mass">मान:</label>
+                        <input type="number" id="srM" step="any" value="1.989" required>
+                        <label>x 10^</label>
+                        <input type="number" id="srMe" class="exponent-input" value="30" required>
+                        <label>kg</label>
+                    </div>
+                    <button type="submit" data-i18n="common.calculate">गणना करा</button>
+                </form>
+                <p class="result" id="schwarzschildRadiusRes" data-i18n="relativity.schwarzschildResult">श्वार्झशिल्ड त्रिज्या:</p>
+            </div>
+
+            <div class="box">
+                <span class="label" data-i18n="relativity.specialLabel">विशेष_सापेक्षता_काल_विस्तार</span>
+                <form id="SpecialRelativityCalc">
+                    <div>
+                        <label for="tdBeta" data-i18n="relativity.velocity">वेग:</label>
+                        <input type="number" id="tdBeta" step="any" min="0" max="0.999999" value="0.8" required>
+                        <label>c</label>
+                    </div>
+                    <div>
+                        <label for="tdProper" data-i18n="relativity.properTime">स्वकाल:</label>
+                        <input type="number" id="tdProper" step="any" value="1" required>
+                        <label>s</label>
+                    </div>
+                    <button type="submit" data-i18n="common.calculate">गणना करा</button>
+                </form>
+                <p class="result" id="specialRelativityRes" data-i18n="relativity.specialResult">विस्तारित वेळ:</p>
+            </div>
+
+            <div class="box full-span">
+                <span class="label" data-i18n="relativity.gravitationalLabel">गुरुत्वीय_काल_विस्तार</span>
+                <form id="GravitationalTimeDilationCalc">
+                    <div>
+                        <label for="gtG" data-i18n="orbital.gravitationalConstant">गुरुत्व स्थिरांक:</label>
+                        <input type="number" id="gtG" step="any" value="6.6743" required>
+                        <label>x 10^</label>
+                        <input type="number" id="gtGe" class="exponent-input" value="-11" required>
+                        <label>m<sup>3</sup> kg<sup>-1</sup> s<sup>-2</sup></label>
+                    </div>
+                    <div>
+                        <label for="gtM" data-i18n="relativity.mass">मान:</label>
+                        <input type="number" id="gtM" step="any" value="5.9722" required>
+                        <label>x 10^</label>
+                        <input type="number" id="gtMe" class="exponent-input" value="24" required>
+                        <label>kg</label>
+                    </div>
+                    <div>
+                        <label for="gtR" data-i18n="relativity.observerRadius">निरीक्षक त्रिज्या:</label>
+                        <input type="number" id="gtR" step="any" value="6.771" required>
+                        <label>x 10^</label>
+                        <input type="number" id="gtRe" class="exponent-input" value="6" required>
+                        <label>m</label>
+                    </div>
+                    <div>
+                        <label for="gtT" data-i18n="relativity.coordinateTime">समन्वय वेळ:</label>
+                        <input type="number" id="gtT" step="any" value="86400" required>
+                        <label>s</label>
+                    </div>
+                    <button type="submit" data-i18n="common.calculate">गणना करा</button>
+                </form>
+                <p class="result" id="gravitationalTimeDilationRes" data-i18n="relativity.gravitationalResult">स्थानिक स्वकाल:</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="box">
+            <span class="label" data-i18n="footer.label">तळटीप</span>
+            <p data-i18n="footer.copyright">> कॉपीराइट 2026 - Rayan Madan</p>
+        </div>
+    </footer>
+
+    <script src="scripts/translations.js"></script>
+    <script src="scripts/numberInputs.js"></script>
+    <script src="scripts/clock.js"></script>
+    <script src="scripts/relativityTools.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VITSpace मुक्ती वेग साधने</title>
+    <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body data-page="escape" data-title-key="page.escape.title">
+    <nav class="navbar">
+        <ul>
+            <li class="navlogo">
+                <a href="index.html">> VITSPACE</a>
+            </li>
+            <li class="navcontent">
+                <a href="toolsDirectory.html" data-i18n="nav.toolsPortal">साधन_पोर्टल</a>
+            </li>
+            <li class="navcontent">
+                <a href="dataDirectory.html" data-i18n="nav.dataPortal">डेटा_पोर्टल</a>
+            </li>
+            <li class="navcontent">
+                <a href="links.html" data-i18n="nav.sources">स्रोत</a>
+            </li>
+            <li class="navcontent lang-switch">
+                <button type="button" class="lang-toggle" data-lang-switch="mr" data-i18n="nav.langMarathi">मराठी</button>
+                <button type="button" class="lang-toggle" data-lang-switch="en" data-i18n="nav.langEnglish">EN</button>
+            </li>
+            <li class="navcontent"><span id="clock">00:00:00</span></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="grid">
+            <div class="box full-span">
+                <span class="label" data-i18n="escape.heading">गुरुत्व_साधने</span>
+                <p class="hero-copy" data-i18n="escape.hero">एखाद्या ग्रहाकडून सुटणे किती कठीण आहे आणि त्याचे पृष्ठीय आकर्षण किती मजबूत आहे हे मोजा.</p>
+            </div>
+
+            <div class="box">
+                <span class="label" data-i18n="escape.escapeVelocityLabel">मुक्ती_वेग_गणक</span>
+                <form id="EscapeVelocityCalc">
+                    <div>
+                        <label for="evG" data-i18n="orbital.gravitationalConstant">गुरुत्व स्थिरांक:</label>
+                        <input type="number" id="evG" step="any" value="6.6743" required>
+                        <label>x 10^</label>
+                        <input type="number" id="evGe" class="exponent-input" value="-11" required>
+                        <label>m<sup>3</sup> kg<sup>-1</sup> s<sup>-2</sup></label>
+                    </div>
+                    <div>
+                        <label for="evM" data-i18n="orbital.planetaryMass">ग्रहमान:</label>
+                        <input type="number" id="evM" step="any" value="5.9722" required>
+                        <label>x 10^</label>
+                        <input type="number" id="evMe" class="exponent-input" value="24" required>
+                        <label>kg</label>
+                    </div>
+                    <div>
+                        <label for="evR" data-i18n="escape.distanceFromCenter">केंद्रापासून अंतर:</label>
+                        <input type="number" id="evR" step="any" value="6.371" required>
+                        <label>x 10^</label>
+                        <input type="number" id="evRe" class="exponent-input" value="6" required>
+                        <label>m</label>
+                    </div>
+                    <button type="submit" data-i18n="common.calculate">गणना करा</button>
+                </form>
+                <p class="result" id="escapeVelocityRes" data-i18n="escape.escapeVelocityResult">मुक्ती वेग:</p>
+            </div>
+
+            <div class="box">
+                <span class="label" data-i18n="escape.surfaceGravityLabel">पृष्ठीय_गुरुत्व_गणक</span>
+                <form id="SurfaceGravityCalc">
+                    <div>
+                        <label for="sgG" data-i18n="orbital.gravitationalConstant">गुरुत्व स्थिरांक:</label>
+                        <input type="number" id="sgG" step="any" value="6.6743" required>
+                        <label>x 10^</label>
+                        <input type="number" id="sgGe" class="exponent-input" value="-11" required>
+                        <label>m<sup>3</sup> kg<sup>-1</sup> s<sup>-2</sup></label>
+                    </div>
+                    <div>
+                        <label for="sgM" data-i18n="orbital.planetaryMass">ग्रहमान:</label>
+                        <input type="number" id="sgM" step="any" value="5.9722" required>
+                        <label>x 10^</label>
+                        <input type="number" id="sgMe" class="exponent-input" value="24" required>
+                        <label>kg</label>
+                    </div>
+                    <div>
+                        <label for="sgR" data-i18n="orbital.planetaryRadius">ग्रह त्रिज्या:</label>
+                        <input type="number" id="sgR" step="any" value="6.371" required>
+                        <label>x 10^</label>
+                        <input type="number" id="sgRe" class="exponent-input" value="6" required>
+                        <label>m</label>
+                    </div>
+                    <button type="submit" data-i18n="common.calculate">गणना करा</button>
+                </form>
+                <p class="result" id="surfaceGravityRes" data-i18n="escape.surfaceGravityResult">पृष्ठीय गुरुत्व:</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="box">
+            <span class="label" data-i18n="footer.label">तळटीप</span>
+            <p data-i18n="footer.copyright">> कॉपीराइट 2026 - Rayan Madan</p>
+        </div>
+    </footer>
+
+    <script src="scripts/translations.js"></script>
+    <script src="scripts/numberInputs.js"></script>
+    <script src="scripts/clock.js"></script>
+    <script src="scripts/escapeVelocityTools.js"></script>
+</body>
+</html>

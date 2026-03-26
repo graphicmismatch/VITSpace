@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VITSpace सिग्नल विलंब साधने</title>
+    <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body data-page="signal" data-title-key="page.signal.title">
+    <nav class="navbar">
+        <ul>
+            <li class="navlogo">
+                <a href="index.html">> VITSPACE</a>
+            </li>
+            <li class="navcontent">
+                <a href="toolsDirectory.html" data-i18n="nav.toolsPortal">साधन_पोर्टल</a>
+            </li>
+            <li class="navcontent">
+                <a href="dataDirectory.html" data-i18n="nav.dataPortal">डेटा_पोर्टल</a>
+            </li>
+            <li class="navcontent">
+                <a href="links.html" data-i18n="nav.sources">स्रोत</a>
+            </li>
+            <li class="navcontent lang-switch">
+                <button type="button" class="lang-toggle" data-lang-switch="mr" data-i18n="nav.langMarathi">मराठी</button>
+                <button type="button" class="lang-toggle" data-lang-switch="en" data-i18n="nav.langEnglish">EN</button>
+            </li>
+            <li class="navcontent"><span id="clock">00:00:00</span></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="grid">
+            <div class="box full-span">
+                <span class="label" data-i18n="signal.heading">संप्रेषण_विलंब</span>
+                <p class="hero-copy" data-i18n="signal.hero">मोहीम अंतरांवर विद्युतचुंबकीय संकेत पोहोचायला किती वेळ लागतो ते मोजा.</p>
+            </div>
+
+            <div class="box">
+                <span class="label" data-i18n="signal.oneWayLabel">एकमार्गी_सिग्नल_विलंब</span>
+                <form id="OneWaySignalDelayCalc">
+                    <div>
+                        <label for="owD" data-i18n="signal.distance">अंतर:</label>
+                        <input type="number" id="owD" step="any" value="384.4" required>
+                        <label>x 10^</label>
+                        <input type="number" id="owDe" class="exponent-input" value="3" required>
+                        <label>km</label>
+                    </div>
+                    <div>
+                        <label for="owC" data-i18n="signal.signalSpeed">सिग्नल वेग:</label>
+                        <input type="number" id="owC" step="any" value="2.99792458" required>
+                        <label>x 10^</label>
+                        <input type="number" id="owCe" class="exponent-input" value="5" required>
+                        <label>km s<sup>-1</sup></label>
+                    </div>
+                    <button type="submit" data-i18n="common.calculate">गणना करा</button>
+                </form>
+                <p class="result" id="oneWayDelayRes" data-i18n="signal.oneWayResult">एकमार्गी विलंब:</p>
+            </div>
+
+            <div class="box">
+                <span class="label" data-i18n="signal.roundTripLabel">दुतर्फा_सिग्नल_विलंब</span>
+                <form id="RoundTripSignalDelayCalc">
+                    <div>
+                        <label for="rtD" data-i18n="signal.distance">अंतर:</label>
+                        <input type="number" id="rtD" step="any" value="225" required>
+                        <label>x 10^</label>
+                        <input type="number" id="rtDe" class="exponent-input" value="6" required>
+                        <label>km</label>
+                    </div>
+                    <div>
+                        <label for="rtC" data-i18n="signal.signalSpeed">सिग्नल वेग:</label>
+                        <input type="number" id="rtC" step="any" value="2.99792458" required>
+                        <label>x 10^</label>
+                        <input type="number" id="rtCe" class="exponent-input" value="5" required>
+                        <label>km s<sup>-1</sup></label>
+                    </div>
+                    <button type="submit" data-i18n="common.calculate">गणना करा</button>
+                </form>
+                <p class="result" id="roundTripDelayRes" data-i18n="signal.roundTripResult">दुतर्फा विलंब:</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="box">
+            <span class="label" data-i18n="footer.label">तळटीप</span>
+            <p data-i18n="footer.copyright">> कॉपीराइट 2026 - Rayan Madan</p>
+        </div>
+    </footer>
+
+    <script src="scripts/translations.js"></script>
+    <script src="scripts/numberInputs.js"></script>
+    <script src="scripts/clock.js"></script>
+    <script src="scripts/signalDelayTools.js"></script>
+</body>
+</html>

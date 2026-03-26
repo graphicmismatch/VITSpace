@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VITSpace स्रोत</title>
+    <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body data-page="links" data-title-key="page.links.title">
+    <nav class="navbar">
+        <ul>
+            <li class="navlogo">
+                <a href="index.html">> VITSPACE</a>
+            </li>
+            <li class="navcontent">
+                <a href="toolsDirectory.html" data-i18n="nav.toolsPortal">साधन_पोर्टल</a>
+            </li>
+            <li class="navcontent">
+                <a href="dataDirectory.html" data-i18n="nav.dataPortal">डेटा_पोर्टल</a>
+            </li>
+            <li class="navcontent">
+                <a href="links.html" data-i18n="nav.sources">स्रोत</a>
+            </li>
+            <li class="navcontent lang-switch">
+                <button type="button" class="lang-toggle" data-lang-switch="mr" data-i18n="nav.langMarathi">मराठी</button>
+                <button type="button" class="lang-toggle" data-lang-switch="en" data-i18n="nav.langEnglish">EN</button>
+            </li>
+            <li class="navcontent"><span id="clock">00:00:00</span></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="grid">
+            <div class="box full-span">
+                <span class="label" data-i18n="links.heading">स्रोत_निर्देशिका</span>
+                <p class="hero-copy" data-i18n="links.hero">VITSpace मध्ये वापरल्या जाणाऱ्या सूत्रे आणि थेट डेटा फीड्ससाठी संदर्भ दुवे.</p>
+            </div>
+
+            <div class="box">
+                <span class="label" data-i18n="links.dataApis">डेटा_API</span>
+                <ul class="page-list">
+                    <li>> <a href="https://api.nasa.gov/" target="_blank" rel="noreferrer" data-i18n="links.nasaOpenApis">NASA मुक्त API</a></li>
+                    <li>> <a href="https://api.nasa.gov/assets/html/authentication.html" target="_blank" rel="noreferrer" data-i18n="links.nasaAuth">NASA API प्रमाणीकरण नोंदी</a></li>
+                    <li>> <a href="https://www.earthdata.nasa.gov/engage/open-data-services-software/earthdata-developer-portal/gibs-api" target="_blank" rel="noreferrer" data-i18n="links.gibsApi">Earthdata GIBS API</a></li>
+                    <li>> <a href="https://epic.gsfc.nasa.gov/about/api" target="_blank" rel="noreferrer" data-i18n="links.epicApi">EPIC API संदर्भ</a></li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <span class="label" data-i18n="links.toolFormulas">साधन_सूत्रे</span>
+                <ul class="page-list">
+                    <li data-i18n="links.formula1">वर्तुळाकार कक्षीय वेग आणि कालावधीची समीकरणे</li>
+                    <li data-i18n="links.formula2">मुक्ती वेग आणि पृष्ठीय गुरुत्वाची समीकरणे</li>
+                    <li data-i18n="links.formula3">सिग्नल विलंब आणि त्सिऑल्कोव्हस्की रॉकेट समीकरण</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="box">
+            <span class="label" data-i18n="footer.label">तळटीप</span>
+            <p data-i18n="footer.copyright">> कॉपीराइट 2026 - Rayan Madan</p>
+        </div>
+    </footer>
+
+    <script src="scripts/translations.js"></script>
+    <script src="scripts/numberInputs.js"></script>
+    <script src="scripts/clock.js"></script>
+</body>
+</html>

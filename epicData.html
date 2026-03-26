@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VITSpace EPIC पृथ्वी फीड</title>
+    <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body data-page="epic" data-title-key="page.epic.title">
+    <nav class="navbar">
+        <ul>
+            <li class="navlogo">
+                <a href="index.html">> VITSPACE</a>
+            </li>
+            <li class="navcontent">
+                <a href="toolsDirectory.html" data-i18n="nav.toolsPortal">साधन_पोर्टल</a>
+            </li>
+            <li class="navcontent">
+                <a href="dataDirectory.html" data-i18n="nav.dataPortal">डेटा_पोर्टल</a>
+            </li>
+            <li class="navcontent">
+                <a href="links.html" data-i18n="nav.sources">स्रोत</a>
+            </li>
+            <li class="navcontent lang-switch">
+                <button type="button" class="lang-toggle" data-lang-switch="mr" data-i18n="nav.langMarathi">मराठी</button>
+                <button type="button" class="lang-toggle" data-lang-switch="en" data-i18n="nav.langEnglish">EN</button>
+            </li>
+            <li class="navcontent"><span id="clock">00:00:00</span></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="grid">
+            <div class="box full-span">
+                <span class="label" data-i18n="epic.heading">EPIC_पृथ्वी_प्रतिमा</span>
+                <p class="hero-copy" data-i18n="epic.hero">NASA च्या EPIC उपकरणातील नवीनतम पूर्ण-डिस्क पृथ्वी प्रतिमांची माहिती.</p>
+                <button type="button" id="refreshEpic" data-i18n="common.refreshFeed">फीड रीफ्रेश करा</button>
+            </div>
+
+            <div class="box">
+                <span class="label" data-i18n="epic.summary">फीड_सारांश</span>
+                <ul class="status-list">
+                    <li class="status-line"><span data-i18n="epic.frameDate">फ्रेम दिनांक</span><span id="epicDate">लोड होत आहे...</span></li>
+                    <li class="status-line"><span data-i18n="epic.framesLoaded">लोड झालेल्या फ्रेम्स</span><span id="epicCount">-</span></li>
+                    <li class="status-line"><span data-i18n="epic.centroidLat">केंद्र अक्षांश</span><span id="epicLat">-</span></li>
+                    <li class="status-line"><span data-i18n="epic.centroidLon">केंद्र रेखांश</span><span id="epicLon">-</span></li>
+                </ul>
+                <div class="result"><span data-i18n="common.statusPrefix">स्थिती:</span> <span id="epicStatus" data-i18n="epic.statusLoading">API शी संपर्क साधत आहे...</span></div>
+            </div>
+
+            <div class="box full-span">
+                <span class="label" data-i18n="epic.frameLog">फ्रेम_नोंद</span>
+                <ul id="epicList" class="data-list">
+                    <li data-i18n="epic.loadingFeed">EPIC प्रतिमा लोड होत आहेत...</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="box">
+            <span class="label" data-i18n="footer.label">तळटीप</span>
+            <p data-i18n="footer.copyright">> कॉपीराइट 2026 - Rayan Madan</p>
+        </div>
+    </footer>
+
+    <script src="scripts/translations.js"></script>
+    <script src="scripts/numberInputs.js"></script>
+    <script src="scripts/clock.js"></script>
+    <script src="scripts/epicData.js"></script>
+</body>
+</html>

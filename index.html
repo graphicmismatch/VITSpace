@@ -1,58 +1,83 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="mr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VITSpace</title>
     <link rel="stylesheet" href="styles/style.css" />
 </head>
+<body data-page="home" data-title-key="page.home.title">
+    <nav class="navbar">
+        <ul>
+            <li class="navlogo">
+                <a href="index.html">> VITSPACE</a>
+            </li>
+            <li class="navcontent">
+                <a href="toolsDirectory.html" data-i18n="nav.toolsPortal">साधन_पोर्टल</a>
+            </li>
+            <li class="navcontent">
+                <a href="dataDirectory.html" data-i18n="nav.dataPortal">डेटा_पोर्टल</a>
+            </li>
+            <li class="navcontent">
+                <a href="links.html" data-i18n="nav.sources">स्रोत</a>
+            </li>
+            <li class="navcontent lang-switch">
+                <button type="button" class="lang-toggle" data-lang-switch="mr" data-i18n="nav.langMarathi">मराठी</button>
+                <button type="button" class="lang-toggle" data-lang-switch="en" data-i18n="nav.langEnglish">EN</button>
+            </li>
+            <li class="navcontent"><span id="clock">00:00:00</span></li>
+        </ul>
+    </nav>
 
-<nav class="navbar">
-    <ul>
-        <li class="navlogo">
-            <a href="index.html">> VITSPACE</a>
-        </li>
-        <li class="navcontent">
-            <a href="toolsDirectory.html">TOOLS_PORTAL</a>
-        </li>
-        <li class="navcontent">
-            <a href="index.html">DATA_PORTAL</a>
-        </li>
-        <li class="navcontent">
-            <a href="links.html">SOURCES</a>
-        </li>
-        <li class="navcontent"><span id="clock">00:00:00</span></li>
-    </ul>
-</nav>
+    <main>
+        <div class="grid">
+            <div class="box full-span">
+                <span class="label" data-i18n="home.missionBrief">मिशन_सारांश</span>
+                <p class="hero-copy" data-i18n="home.hero">VITSpace हे कक्षीय गणक, प्रणोदन साधने आणि थेट खगोलशास्त्रीय डेटा प्रवाहांसाठी तयार केलेले संक्षिप्त मिशन-कंट्रोल शैलीचे पोर्टल आहे.</p>
+            </div>
 
-<body>
-    <br>
-    <br>
+            <div class="box">
+                <span class="label" data-i18n="home.liveStatus">थेट_स्थिती</span>
+                <ul class="status-list">
+                    <li class="status-line"><span data-i18n="home.toolPages">साधन पृष्ठे</span><span id="toolCount">06</span></li>
+                    <li class="status-line"><span data-i18n="home.dataFeeds">डेटा फीड्स</span><span id="dataCount">04</span></li>
+                </ul>
+            </div>
 
+            <div class="box">
+                <span class="label" data-i18n="home.quickAccess">द्रुत_प्रवेश</span>
+                <ul class="page-list">
+                    <li>> <a href="orbitalCalculationTools.html" data-i18n="home.orbitalLink">कक्षीय गणना साधने</a></li>
+                    <li>> <a href="escapeVelocityTools.html" data-i18n="home.escapeLink">मुक्ती वेग साधने</a></li>
+                    <li>> <a href="signalDelayTools.html" data-i18n="home.signalLink">सिग्नल विलंब साधने</a></li>
+                    <li>> <a href="rocketEquationTools.html" data-i18n="home.rocketLink">रॉकेट समीकरण साधने</a></li>
+                    <li>> <a href="stellarPhysicsTools.html" data-i18n="home.stellarLink">तारकीय भौतिकी साधने</a></li>
+                    <li>> <a href="relativityTools.html" data-i18n="home.relativityLink">सापेक्षता साधने</a></li>
+                </ul>
+            </div>
 
-    <div class="grid">
-        <div class="box">
-            <span class="label">DATA_STREAM</span>
-            <p>Orbital coordinates: <span id="coords">FETCHING...</span></p>
-            <p>Active Satellites: 4,122</p>
+            <div class="box full-span">
+                <span class="label" data-i18n="home.dataPortal">डेटा_पोर्टल</span>
+                <ul class="page-list">
+                    <li>> <a href="dataDirectory.html" data-i18n="home.openDataDirectory">मुक्त डेटा निर्देशिका</a></li>
+                    <li>> <a href="apodData.html" data-i18n="home.apodLink">खगोलचित्र फीड</a></li>
+                    <li>> <a href="neoData.html" data-i18n="home.neoLink">पृथ्वीजवळील वस्तू फीड</a></li>
+                    <li>> <a href="gibsEarthData.html" data-i18n="home.gibsLink">GIBS पृथ्वी फीड</a></li>
+                    <li>> <a href="epicData.html" data-i18n="home.epicLink">EPIC पृथ्वी फीड</a></li>
+                </ul>
+            </div>
         </div>
+    </main>
 
-        <div class="box">
-            <span class="label">TOOLS</span>
-            <p>> <a>Orbit Calculator</a></p>
-            <p>> <a>Signal Decoder</a></p>
-        </div>
-
-
-    </div>
-    <br>
-    <br>
     <footer>
         <div class="box">
-            <span class="label">FOOTER</span>
-            <p>> Copyright 2026 - Rayan Madan</p>
+            <span class="label" data-i18n="footer.label">तळटीप</span>
+            <p data-i18n="footer.copyright">> कॉपीराइट 2026 - Rayan Madan</p>
         </div>
     </footer>
 
+    <script src="scripts/translations.js"></script>
+    <script src="scripts/numberInputs.js"></script>
     <script src="scripts/clock.js"></script>
     <script src="scripts/homepageStats.js"></script>
 </body>
